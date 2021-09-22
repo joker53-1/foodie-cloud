@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: platform-gateway
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations: 
+          '[/**]':
+#            返回的志愿共享给请求资源
+            allowed-origins:
+              - "http://jokerni53.tk:8080"
+              - "http://localhost:8080"
+              - "http://47.111.143.81:8080"
+              - "http://47.111.143.81"
+#            比如cookie，authorization之类的认证信息
+            allow-credentials: true
+            allowed-headers: "*"
+            allowed-methods: "*"
+            expose-headers: "*"
+#            表示Options可以在浏览器缓存多长时间
+            max-age: 600
+      locator:
+        enabled: false
+        lower-case-service-id: true
+
+server:
+  port: 20004
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:20000/eureka/
+
+
+#开启所有的actuator-endpoint
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

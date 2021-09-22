@@ -1,0 +1,20 @@
+# 项目排除路径
+/common/foodie-cloud-common/target/
+/common/foodie-cloud-shared-pojo/target/
+/common/foodie-cloud-web-components/target/
+/domain/item/foodie-item-api/target/
+/domain/item/foodie-item-mapper/target/
+/domain/item/foodie-item-pojo/target/
+/domain/item/foodie-item-service/target/
+/domain/item/foodie-item-web/target/
+/domain/order/foodie-order-api/target/
+/domain/order/foodie-order-mapper/target/
+/domain/order/foodie-order-pojo/target/
+/domain/order/foodie-order-service/target/
+/domain/order/foodie-order-web/target/
+/domain/user/foodie-user-api/target/
+/domain/user/foodie-user-mapper/target/
+/domain/user/foodie-user-pojo/target/
+/domain/user/foodie-user-service/target/
+/domain/user/foodie-user-web/target/
+/platform/registry-center/target/
